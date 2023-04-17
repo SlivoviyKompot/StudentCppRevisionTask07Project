@@ -34,5 +34,29 @@
  */
 
 bool task03(int x, int y, int z, int a, int b, int c) {
-	return false;
+	if (x < 1 || y < 1 || z < 1 || a < 1 || b < 1 || c < 1) {
+		return false;
+	}
+	if (a > b) {
+		swap(a, b);
+	}
+	if (b > c) {
+		swap(b, c);
+	}
+	if (a > b) {
+		swap(a, b);
+	}
+	if (x > y) {
+		swap(x, y);
+	}
+	if (y > z) {
+		swap(y, z);
+	}
+	if (x > y) {
+		swap(x, y);
+	}
+	if (x > a || y > b || z > c) {
+		return false;
+	}
+	return true;
 }
